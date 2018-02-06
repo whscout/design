@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            $("#uuu").click(function () {
+                if ($("#username").val() == '') {
+                    confirm("请输入用户名！！");
+                    return false;
+                }
+                if ($("#userPassword").val() == '') {
+                    confirm("请输入密码！！");
+                    return false;
+                }
+            });
+        });
+
+    </script>
+</head>
+<body style="background: #278296">
+<form action="login.php" id="userLogin" name="userLogin" method="post">
+    <div>
+        <table align="center" style="margin-top:150px;" cellpadding="5" cellspacing="5">
+            <tr>
+                <td>用户名：</td>
+                <td>
+                    <input type="text" id="username">
+                </td>
+            </tr>
+            <tr>
+                <td>密码：</td>
+                <td>
+                    <input type="password" id="userPassword">
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <input type="button" id="uuu" value="登录系统">
+                    &nbsp;&nbsp; <a href="get_password.php?act=forget_pwd" style="color:white">忘记密码？</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</form>
+
+</body>
+</html>
